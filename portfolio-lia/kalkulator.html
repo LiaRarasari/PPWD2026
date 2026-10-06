@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator - Lia Rarasari</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">Lia Rarasari</div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <p class="small-text">
+                    MY PROJECT
+                </p>
+
+                <h1>
+                    Kalkulator
+                    <span>JavaScript</span>
+                </h1>
+
+                <p class="hero-description">
+                    Kalkulator sederhana yang dibuat menggunakan
+                    JavaScript untuk melakukan perhitungan dasar.
+                </p>
+
+
+                <div id="calculator">
+
+                    <input
+                        type="number"
+                        id="angka1"
+                        placeholder="Angka pertama"
+                    >
+
+                    <select id="operator">
+                        <option value="+">Penjumlahan (+)</option>
+                        <option value="-">Pengurangan (-)</option>
+                        <option value="*">Perkalian (×)</option>
+                        <option value="/">Pembagian (÷)</option>
+                    </select>
+
+                    <input
+                        type="number"
+                        id="angka2"
+                        placeholder="Angka kedua"
+                    >
+
+                    <button
+                        type="button"
+                        class="btn"
+                        id="hitung"
+                    >
+                        Hitung
+                    </button>
+
+                    <p id="hasil">
+                        Hasil akan muncul di sini.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="index.html"
+                        class="btn btn-outline"
+                    >
+                        Kembali ke Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Made with love by Lia Rarasari
+            </p>
+
+            <p>
+                &copy; 2026 Lia Rarasari
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        const tombolHitung =
+            document.getElementById('hitung');
+
+        tombolHitung.addEventListener(
+            'click',
+            function () {
+
+                const angka1 =
+                    Number(
+                        document.getElementById('angka1').value
+                    );
+
+                const angka2 =
+                    Number(
+                        document.getElementById('angka2').value
+                    );
+
+                const operator =
+                    document.getElementById('operator').value;
+
+                const hasil =
+                    document.getElementById('hasil');
+
+                if (
+                    document.getElementById('angka1').value === '' ||
+                    document.getElementById('angka2').value === ''
+                ) {
+
+                    hasil.textContent =
+                        'Silakan masukkan kedua angka.';
+
+                    return;
+                }
+
+                let total;
+
+                if (operator === '+') {
+                    total = angka1 + angka2;
+                }
+
+                else if (operator === '-') {
+                    total = angka1 - angka2;
+                }
+
+                else if (operator === '*') {
+                    total = angka1 * angka2;
+                }
+
+                else if (operator === '/') {
+
+                    if (angka2 === 0) {
+
+                        hasil.textContent =
+                            'Angka kedua tidak boleh 0.';
+
+                        return;
+                    }
+
+                    total = angka1 / angka2;
+                }
+
+                hasil.textContent =
+                    'Hasil: ' + total;
+            }
+        );
+    </script>
+
+</body>
+</html>

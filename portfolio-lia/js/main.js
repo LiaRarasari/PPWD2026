@@ -1,4 +1,9 @@
-const typingText = document.getElementById('typing-text');
+// ================================
+// TYPING EFFECT
+// ================================
+
+const typingText =
+    document.getElementById('typing-text');
 
 if (typingText) {
 
@@ -14,27 +19,37 @@ if (typingText) {
 
     function typeEffect() {
 
-        const currentName = names[nameIndex];
+        const currentName =
+            names[nameIndex];
 
         if (isDeleting) {
 
             typingText.textContent =
-                currentName.substring(0, charIndex - 1);
+                currentName.substring(
+                    0,
+                    charIndex - 1
+                );
 
             charIndex--;
 
         } else {
 
             typingText.textContent =
-                currentName.substring(0, charIndex + 1);
+                currentName.substring(
+                    0,
+                    charIndex + 1
+                );
 
             charIndex++;
         }
 
-        let delay = isDeleting ? 50 : 100;
+        let delay =
+            isDeleting ? 50 : 100;
 
-        if (!isDeleting &&
-            charIndex === currentName.length) {
+        if (
+            !isDeleting &&
+            charIndex === currentName.length
+        ) {
 
             delay = 2000;
             isDeleting = true;
@@ -47,98 +62,25 @@ if (typingText) {
             isDeleting = false;
 
             nameIndex =
-                (nameIndex + 1) % names.length;
+                (nameIndex + 1) %
+                names.length;
 
             delay = 500;
         }
 
-        setTimeout(typeEffect, delay);
+        setTimeout(
+            typeEffect,
+            delay
+        );
     }
 
     typeEffect();
 }
 
-const projects = [
 
-    {
-        title: 'Website Portfolio',
-
-        desc:
-            'Website portfolio pribadi menggunakan HTML, CSS, dan JavaScript.',
-
-        image:
-            'images/project-portfolio.png'
-    },
-
-    {
-        title: 'Kalkulator JavaScript',
-
-        desc:
-            'Kalkulator sederhana yang dibuat dengan JavaScript.',
-
-        image:
-            'images/project-kalkulator.png'
-    },
-
-    {
-        title: 'UI/UX Design',
-
-        desc:
-            'Rancangan tampilan antarmuka website yang menarik dan mudah digunakan.',
-
-        image:
-            'images/project-uiux.png'
-    }
-
-];
-
-const projectGrid =
-    document.getElementById('project-grid');
-
-if (projectGrid) {
-
-    projects.forEach(project => {
-
-        const card =
-            document.createElement('div');
-
-        card.className =
-            'project-card';
-
-        card.innerHTML = `
-
-            <img
-                src="${project.image}"
-                alt="${project.title}"
-            >
-
-            <h3>
-                ${project.title}
-            </h3>
-
-            <p>
-                ${project.desc}
-            </p>
-
-        `;
-
-        card.addEventListener(
-            'click',
-            () => {
-
-                alert(
-                    'Anda memilih proyek: ' +
-                    project.title
-                );
-
-            }
-        );
-
-        projectGrid.appendChild(card);
-
-    });
-
-}
+// ================================
+// VALIDASI FORM CONTACT
+// ================================
 
 const contactForm =
     document.getElementById('contact-form');
