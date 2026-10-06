@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px #dddddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7651c9;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #7651c9;
+}
+
+.home {
+    min-height: 600px;
+    padding: 70px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #eee7ff, #fff0f7);
+}
+
+.home-text {
+    max-width: 700px;
+    text-align: center;
+}
+
+.home-text p:first-child {
+    color: #7651c9;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #2f2742;
+}
+
+.home-text h2 {
+    color: #7651c9;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #7651c9;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #5d3eaa;
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+.judul {
+    text-align: center;
+    font-size: 32px;
+    color: #7651c9;
+    margin-bottom: 40px;
+}
+
+.tentang-text {
+    max-width: 800px;
+    margin: auto;
+}
+
+.tentang-text p {
+    margin-bottom: 15px;
+}
+
+.data {
+    background-color: #f5f0ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.data p {
+    margin-bottom: 8px;
+}
+
+.keahlian-section {
+    background-color: #faf8ff;
+    max-width: none;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.keahlian {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.kartu {
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #dddddd;
+    border-top: 5px solid #8b65d1;
+}
+
+.kartu h3 {
+    color: #7651c9;
+    margin-bottom: 10px;
+}
+
+.kontak {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #eee7ff, #fff0f7);
+}
+
+.kontak h2 {
+    color: #7651c9;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.kontak-info {
+    margin: 25px auto 0;
+    max-width: 500px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #dddddd;
+}
+
+.kontak-info p {
+    margin-bottom: 8px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #7651c9;
+    color: white;
+}
+
+@media (max-width: 991px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home {
+        padding: 60px 5%;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .menu {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 50px 20px;
+    }
+
+    .home-text h1 {
+        font-size: 34px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .keahlian {
+        grid-template-columns: 1fr;
+    }
+}
