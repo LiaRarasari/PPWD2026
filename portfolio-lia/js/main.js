@@ -1,7 +1,3 @@
-// ================================
-// TYPING EFFECT
-// ================================
-
 const typingText =
     document.getElementById('typing-text');
 
@@ -76,11 +72,6 @@ if (typingText) {
 
     typeEffect();
 }
-
-
-// ================================
-// VALIDASI FORM CONTACT
-// ================================
 
 const contactForm =
     document.getElementById('contact-form');
