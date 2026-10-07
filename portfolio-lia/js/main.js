@@ -58,6 +58,7 @@ if (typingText) {
     typeEffect();
 }
 
+
 const projects = [
 
     {
@@ -67,7 +68,10 @@ const projects = [
             'Website portfolio pribadi menggunakan HTML, CSS, dan JavaScript.',
 
         image:
-            'images/project-portfolio.png'
+            'images/project-portfolio.png',
+
+        link:
+            'portfolio.html'
     },
 
     {
@@ -77,7 +81,10 @@ const projects = [
             'Kalkulator sederhana yang dibuat dengan JavaScript.',
 
         image:
-            'images/project-kalkulator.png'
+            'images/project-kalkulator.png',
+
+        link:
+            'kalkulator.html'
     },
 
     {
@@ -87,10 +94,14 @@ const projects = [
             'Rancangan tampilan antarmuka website yang menarik dan mudah digunakan.',
 
         image:
-            'images/project-uiux.png'
+            'images/project-uiux.png',
+
+        link:
+            'uiux.html'
     }
 
 ];
+
 
 const projectGrid =
     document.getElementById('project-grid');
@@ -126,10 +137,8 @@ if (projectGrid) {
             'click',
             () => {
 
-                alert(
-                    'Anda memilih proyek: ' +
-                    project.title
-                );
+                window.location.href =
+                    project.link;
 
             }
         );
@@ -139,6 +148,7 @@ if (projectGrid) {
     });
 
 }
+
 
 const contactForm =
     document.getElementById('contact-form');
