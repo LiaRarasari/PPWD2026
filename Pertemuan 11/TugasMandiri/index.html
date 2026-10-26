@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal & Pink | Flower Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#beranda" class="logo">petal<span>&</span>pink.</a>
+
+            <div class="menu">
+                <a href="#beranda">Beranda</a>
+                <a href="#produk">Koleksi</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#pesan">Pemesanan</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <div class="hero-text">
+            <p class="subtitle">FLOWERS FOR YOUR SPECIAL MOMENTS</p>
+
+            <h1>Little flowers,<br>
+                <span>big happiness.</span>
+            </h1>
+
+            <p>
+                Setiap bunga punya cerita. Temukan buket cantik
+                untuk menyampaikan rasa sayang, ucapan selamat,
+                atau sekadar membuat hari seseorang lebih indah.
+            </p>
+
+            <a href="#produk" class="button">Lihat Koleksi</a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1000&q=85"
+                alt="Buket bunga berwarna pink">
+            <div class="image-note">
+                <span>Made with love</span>
+                <span>for someone special</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="produk section" id="produk">
+        <div class="section-heading">
+            <p class="subtitle">OUR FLOWER COLLECTION</p>
+            <h2>Bunga cantik untuk <span>hari spesialmu</span></h2>
+            <p>Pilih buket favoritmu dan bagikan kebahagiaan.</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-kategori="semua">
+                Semua
+            </button>
+            <button class="tab-btn" data-kategori="romantis">
+                Romantis
+            </button>
+            <button class="tab-btn" data-kategori="wisuda">
+                Wisuda
+            </button>
+            <button class="tab-btn" data-kategori="hadiah">
+                Hadiah
+            </button>
+        </div>
+
+        <div class="product-grid">
+            <article class="product-card" data-kategori="romantis">
+                <img
+                    src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=85"
+                    alt="Buket bunga mawar romantis">
+
+                <div class="product-info">
+                    <p class="category">ROMANTIC SERIES</p>
+                    <h3>Sweet Blush</h3>
+                    <p class="description">
+                        Buket manis untuk seseorang yang istimewa.
+                    </p>
+                    <p class="price">Rp125.000</p>
+                    <button class="button order-btn"
+                        data-produk="Sweet Blush">
+                        Pilih Buket
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card" data-kategori="wisuda">
+                <img
+                    src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=700&q=85"
+                    alt="Rangkaian bunga untuk hadiah wisuda">
+
+                <div class="product-info">
+                    <p class="category">GRADUATION SERIES</p>
+                    <h3>Blooming Day</h3>
+                    <p class="description">
+                        Buket cantik untuk merayakan pencapaian.
+                    </p>
+                    <p class="price">Rp150.000</p>
+                    <button class="button order-btn"
+                        data-produk="Blooming Day">
+                        Pilih Buket
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card" data-kategori="hadiah">
+                <img
+                    src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=700&q=85"
+                    alt="Buket bunga sebagai hadiah">
+
+                <div class="product-info">
+                    <p class="category">GIFT SERIES</p>
+                    <h3>Lovely Day</h3>
+                    <p class="description">
+                        Kejutan sederhana untuk hari yang berkesan.
+                    </p>
+                    <p class="price">Rp100.000</p>
+                    <button class="button order-btn"
+                        data-produk="Lovely Day">
+                        Pilih Buket
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="tentang section" id="tentang">
+        <div>
+            <p class="subtitle">A LITTLE ABOUT US</p>
+            <h2>Bunga kecil, cerita yang berarti.</h2>
+        </div>
+
+        <p>
+            Petal & Pink adalah toko bunga yang menyediakan
+            rangkaian buket untuk berbagai momen, mulai dari
+            ulang tahun, wisuda, hingga hadiah untuk orang tersayang.
+            Kami percaya bahwa bunga bisa menjadi cara sederhana
+            untuk menyampaikan perasaan.
+        </p>
+    </section>
+
+    <section class="pesan section" id="pesan">
+        <div class="section-heading">
+            <p class="subtitle">LET'S MAKE SOMEONE HAPPY</p>
+            <h2>Pesan buket <span>favoritmu</span></h2>
+            <p>Lengkapi data berikut untuk membuat pesanan.</p>
+        </div>
+
+        <form id="form-pesanan">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama"
+                placeholder="Masukkan nama lengkap">
+
+            <label for="email">Alamat email</label>
+            <input type="email" id="email" name="email"
+                placeholder="nama@email.com">
+
+            <label for="telepon">Nomor telepon</label>
+            <input type="tel" id="telepon" name="telepon"
+                placeholder="Contoh: 081234567890">
+
+            <label for="produk-pilihan">Pilih buket</label>
+            <select id="produk-pilihan" name="produk">
+                <option value="">-- Pilih buket bunga --</option>
+                <option value="Sweet Blush">Sweet Blush</option>
+                <option value="Blooming Day">Blooming Day</option>
+                <option value="Lovely Day">Lovely Day</option>
+            </select>
+
+            <label for="jumlah">Jumlah buket</label>
+            <input type="number" id="jumlah" name="jumlah"
+                min="1" placeholder="Masukkan jumlah buket">
+
+            <button type="submit" class="button">
+                Kirim Pesanan
+            </button>
+
+            <div id="hasil-pesanan"></div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Petal & Pink | Flowers made with love.</p>
+        <p>© 2026 Petal & Pink Flower Shop</p>
+    </footer>
+
+    <button id="kembali-atas" aria-label="Kembali ke atas">
+        ↑
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
